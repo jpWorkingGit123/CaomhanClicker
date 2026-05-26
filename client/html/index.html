@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caomhan Clicker</title>
+
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body class="index-body">
+
+  <div class="index-container">
+
+    <h1 class="title">Caomhan Clicker</h1>
+
+    <p class="subtitle">
+      Generate KeevCoins. Collect Caomhans. Break reality.
+    </p>
+
+    <button id="startGameBtn" class="primary-button">
+      Start Game
+    </button>
+
+  </div>
+
+  <script>
+    document
+      .getElementById("startGameBtn")
+      .addEventListener("click", () => {
+        window.location.href = "./game.html";
+      });
+  </script>
+
+</body>
+</html>

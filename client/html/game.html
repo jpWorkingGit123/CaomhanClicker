@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caomhan Clicker - Game</title>
+
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body class="game-body">
+
+  <!-- HUD (top bar) -->
+  <div id="hud-container"></div>
+
+  <!-- MAIN GAME AREA -->
+  <div class="game-container">
+
+    <!-- CLICK AREA -->
+    <div class="click-area">
+
+      <canvas id="gameCanvas"></canvas>
+
+      <button id="mainClickButton" class="caomhan-click-button">
+        Click Caomhan
+      </button>
+
+      <div id="floatingTextLayer"></div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="side-panel">
+
+      <div id="shop-container"></div>
+
+      <div id="booster-container"></div>
+
+    </div>
+
+  </div>
+
+  <!-- LOWER PANEL -->
+  <div id="stickerBook-container"></div>
+
+  <!-- AUDIO -->
+  <audio id="bgMusic" loop>
+    <source src="../audio/music.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- MAIN CLIENT ENTRY -->
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>
