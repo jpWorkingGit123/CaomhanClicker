@@ -1,0 +1,46 @@
+/* client/css/shop.css */
+
+.shop-item {
+  background: #374151;
+
+  border-radius: 12px;
+
+  padding: 1rem;
+
+  margin-bottom: 1rem;
+
+  transition: 0.2s;
+}
+
+.shop-item:hover {
+  transform: scale(1.02);
+
+  background: #4b5563;
+}
+
+.shop-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.shop-item p {
+  margin-bottom: 0.4rem;
+  color: #d1d5db;
+}
+
+.shop-item button {
+  width: 100%;
+
+  padding: 0.7rem;
+
+  border-radius: 8px;
+
+  background: #22c55e;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+.shop-item button:hover {
+  background: #16a34a;
+}

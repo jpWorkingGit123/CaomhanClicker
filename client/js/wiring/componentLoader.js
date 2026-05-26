@@ -1,36 +1,45 @@
-async function loadHTML(path) {
-  const res = await fetch(path);
-  return await res.text();
-}
-
 export async function loadComponents() {
-  const hud = await loadHTML(
-    "../html/components/hud.html"
-  );
 
-  const shop = await loadHTML(
-    "../html/components/shop.html"
-  );
+  const components = [
+    {
+      path: "./components/shop.html",
+      target: "shop-modal"
+    },
+    {
+      path: "./components/boosterPacks.html",
+      target: "packs-modal"
+    },
+    {
+      path: "./components/stickerBook.html",
+      target: "stickers-modal"
+    },
+    {
+      path: "./components/hud.html",
+      target: "hud-container"
+    }
+  ];
 
-  const packs = await loadHTML(
-    "../html/components/boosterPacks.html"
-  );
+  for (const component of components) {
 
-  const stickerBook = await loadHTML(
-    "../html/components/stickerBook.html"
-  );
+    const res =
+      await fetch(component.path);
 
-  document.getElementById("hud-container").innerHTML =
-    hud;
+    const html =
+      await res.text();
 
-  document.getElementById("shop-container").innerHTML =
-    shop;
+    const target =
+      document.getElementById(component.target);
 
-  document.getElementById(
-    "booster-container"
-  ).innerHTML = packs;
+    // SAFE CHECK
+    if (!target) {
 
-  document.getElementById(
-    "stickerBook-container"
-  ).innerHTML = stickerBook;
+      console.error(
+        `Missing component target: ${component.target}`
+      );
+
+      continue;
+    }
+
+    target.innerHTML = html;
+  }
 }

@@ -1,0 +1,63 @@
+/* client/css/animations.css */
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+}
+
+.floating-text {
+  position: absolute;
+
+  color: gold;
+
+  font-weight: bold;
+
+  pointer-events: none;
+
+  animation: floatUp 1s ease-out forwards;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 0.4s ease;
+}
+
+@keyframes shinyGlow {
+  0% {
+    box-shadow: 0 0 5px gold;
+  }
+
+  50% {
+    box-shadow:
+      0 0 20px gold,
+      0 0 40px yellow;
+  }
+
+  100% {
+    box-shadow: 0 0 5px gold;
+  }
+}
+
+.shiny-animated {
+  animation: shinyGlow 2s infinite;
+}

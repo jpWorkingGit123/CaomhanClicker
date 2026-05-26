@@ -1,0 +1,50 @@
+/* client/css/stickers.css */
+
+.sticker-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(100px, 1fr));
+
+  gap: 1rem;
+}
+
+.sticker-card {
+  background: #334155;
+
+  border-radius: 12px;
+
+  padding: 0.5rem;
+
+  text-align: center;
+
+  transition: 0.2s;
+}
+
+.sticker-card img {
+  width: 100%;
+
+  border-radius: 8px;
+}
+
+.sticker-card:hover {
+  transform: scale(1.05);
+}
+
+.sticker-name {
+  margin-top: 0.5rem;
+
+  font-size: 0.85rem;
+}
+
+.unowned {
+  filter: grayscale(1) brightness(0.35);
+}
+
+.shiny {
+  border: 2px solid gold;
+
+  box-shadow:
+    0 0 10px gold,
+    0 0 20px gold;
+}

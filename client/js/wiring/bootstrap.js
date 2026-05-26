@@ -2,13 +2,14 @@ import API from "../core/api.js";
 import GameState from "../core/state.js";
 import GameClient from "../core/gameClient.js";
 
-import { loadComponents } from "./componentLoader.js";
+
 
 import { bindHUD } from "./bindHUD.js";
 import { bindShop } from "./bindShop.js";
 import { bindPacks } from "./bindPacks.js";
 import { bindStickerBook } from "./bindStickerBook.js";
 import { bindClickArea } from "./bindClickArea.js";
+import { bindModals } from "./bindModals.js";
 
 // CANVAS LAYER
 import { initCanvas } from "../canvas/canvasInit.js";
@@ -30,7 +31,7 @@ export async function bootstrapApp() {
   // =========================
   // 3. BUILD UI SHELL
   // =========================
-  await loadComponents();
+  
 
   // =========================
   // 4. INIT CANVAS LAYER (IMPORTANT FIRST)
@@ -48,6 +49,7 @@ export async function bootstrapApp() {
   bindHUD(state, api);
   bindShop(state, api);
   bindStickerBook(state, api);
+  bindModals();
 
   // =========================
   // 6. CANVAS-AWARE SYSTEMS
